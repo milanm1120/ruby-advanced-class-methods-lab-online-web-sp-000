@@ -36,6 +36,11 @@ class Song
     end
   end
 
+  def self.find_or_create_by_name
+    find_by_name
+    create_by_name
+  end
+
 end
 
 

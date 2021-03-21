@@ -30,7 +30,7 @@ class Song
   end
 
   def self.find_by_name(name)
-    results = self.all.detect { |s| s.name == name}
+    results = self.all.detect { |song| song.name == name}
     results
   end
 
@@ -39,7 +39,7 @@ class Song
   end
 
   def self.alphabetical
-     sort = self.all.sort_by {|s| s.name}
+     sort = self.all.sort_by {|song| song.name}
      sort
   end
 
